@@ -2,6 +2,7 @@ package net.fugimii.tutorial;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fugimii.tutorial.block.ModBlocks;
 import net.fugimii.tutorial.item.ModItemGroups;
 import net.fugimii.tutorial.item.ModItems;
@@ -19,5 +20,7 @@ public class TutorialMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		FuelRegistry.INSTANCE.add(ModItems.COAL_BRIQUETTE, 200);
 	}
 }
